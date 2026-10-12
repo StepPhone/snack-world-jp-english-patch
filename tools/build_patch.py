@@ -130,6 +130,15 @@ def build():
             skipped.append({'path':dest,'source':source,'reason':'different format signature'}); continue
         replacements[dest]=donor; counts['graphic_files']+=1
         manifest.append({'path':dest,'source':source,'kind':kind,'sha256':sha(donor),'original_sha256':sha(orig)})
+    from title_fixes import title_button
+    from anime_fixes import anime_submenu
+    for menu_path,menu_data in {
+        'data/menu/title_d00.xa': title_button(replacements['data/menu/title_d00.xa']),
+        'data/menu/title_anime_00.xa': anime_submenu(j.read('data/menu/title_anime_00.xa'))
+    }.items():
+        replacements[menu_path]=menu_data
+        for entry in manifest:
+            if entry['path']==menu_path: entry['sha256']=sha(menu_data)
     style_path,style_data,style_changes=font_styles(j,e)
     replacements[style_path]=style_data
     counts['font_style_fields_corrected']=len(style_changes)

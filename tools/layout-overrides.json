@@ -1001,5 +1001,11 @@
   },
   "data/txt/ja/gamedata/ev/ev02_8000_ja.cfg.bin": {
     "2:2": "Haah... I guess a superstar's always\\nin the spotlight, twenty-four-seven."
+  },
+  "data/txt/ja/gamedata/menu/title_menu_text.cfg.bin": {
+    "1:2": "The king wants the Purple Eye for Princess\\nMelonia. Chup and friends must defeat\\nMadusa to get it. Can they come up with a\\nwinning plan?",
+    "2:2": "Cinderella once led the elite Glass\\nSlipper unit. Now she is training Chup and\\nfriends to defeat Madusa. Can they survive\\nher tough lessons?",
+    "3:2": "Chup and friends need better gear, but the\\nshopkeeper is away. Pinocchio gives them\\nterrible service! Can they still find a\\nbargain?",
+    "4:2": "A mysterious old woman sells the team a\\nmagic lamp. Three genies emerge! Will\\ntheir magic help Chup and friends finally\\ndefeat Madusa?"
   }
 }

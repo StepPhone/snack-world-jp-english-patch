@@ -3,9 +3,10 @@
 ## v0.5 — 2026-10-12
 
 - Clearly distinguish patch version 0.5 from base-game version 1.0.0.
-- Revert the attempted anime-button artwork repair after a reported title-screen regression. The original Japanese menu remains, with its label issue still open.
-- Fit the reported Mer maidol dialogue into two lines.
-- Menu repair and dialogue layout await in-game visual confirmation.
+- Repair normal and highlighted Watch anime artwork using native texture compression.
+- Restore the original JP anime submenu background and layout, with English episode labels and wrapped summaries.
+- User confirmed title loading and all four submenu pages. Anime playback still fails in Eden; Japanese playback controls remain.
+- Fit the reported Mermaidol dialogue into two lines; that dialogue still needs a separate visual check.
 
 
 ## Playable test build — 2026-10-12

@@ -46,8 +46,8 @@ Close the game before changing files. On Eden, disable or remove this mod's fold
 
 ## Included corrections
 
-- The original Japanese anime menu remains available. Its broken English label is still unresolved; the attempted artwork repair was reverted after a title-screen regression.
-- Shortened the overflowing Mer maidol dialogue to two lines.
+- Repaired the Watch anime button, highlighted state and submenu: English episode labels, wrapped summaries and the original opaque background. Native texture compression preserves title-screen loading.
+- Shortened the overflowing Mermaidol dialogue to two lines.
 
 - English text and compatible graphics drawn from the EUR localization, with additional translations for unmatched Japanese entries.
 - Explicit wrapping and shorter descriptions for item, boon, Jara skill and burst panels; restored missing menu font styles.
@@ -61,7 +61,9 @@ Close the game before changing files. On Eden, disable or remove this mod's fold
 
 The native ARM64 parser regression test reproduced the malformed voice filenames on both the Gale and Mayonna lines; quoted parameters return the intended IDs. **Those exact freeze scenes have not yet been replayed in-game**, so this is not a claim that every freeze is resolved. See [technical notes](docs/dialogue-parser.md).
 
-Character creation and the corrected Jara layout were confirmed in user playtesting. Startup credit rendering and continuation were observed in Eden docked mode. A complete playthrough has not been performed.
+Character creation, the corrected Jara layout, title loading, the Watch anime button and all four episode-menu pages were confirmed in user playtesting. Startup credit rendering and continuation were observed in Eden docked mode. A complete playthrough has not been performed.
+
+**Anime videos still do not play in Eden.** The repaired menu is usable, but playback remains unresolved; its Japanese playback-control labels also remain untranslated. Enabling Eden's browser applet did not resolve playback in the reported test. No emulator configuration is included in this patch.
 
 Quest alignment was adjusted, but EUR-style scrolling is not yet implemented or verified. The empty Madusa battle banner and intermittent striped menu backgrounds remain under investigation. Some incompatible graphics and Japanese keyboard labels remain original. The targeted text scan passed, but this does not establish that every screen is translated or free of overflow.
 

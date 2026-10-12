@@ -1,9 +1,11 @@
 {
   "patch_version": "0.5",
-  "archive_sha256": "d2f940343366cdc671eed36c039d7d375e21884f6a77944319a31de94d8e386d",
+  "archive_sha256": "ef7873b028cdf0433a2fef1edc5cea6427ffa0a4f69e97f85c775ab8d01f860e",
   "archive_members_verified": 18392,
-  "clean_builder_reproduced_staged_archive": false,
+  "clean_builder_reproduced_installed_archive": true,
+  "title_and_anime_submenu_user_confirmed": true,
+  "anime_playback_in_eden": false,
+  "japanese_playback_control_labels_remain": true,
   "exact_freeze_scene_replay_verified": false,
-  "v05_visual_check_verified": false,
-  "title_artwork_repair_reverted": true
+  "physical_switch_verified": false
 }

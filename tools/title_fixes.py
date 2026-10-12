@@ -41,7 +41,9 @@ def title_button(package):
         tile=bytes(result[i:i+64])
         if tile not in unique: unique[tile]=len(unique);newtiles.extend(tile)
         newids.append(unique[tile])
-    compress=lambda b:struct.pack('<I',(len(b)<<3)|5)+zlib.compress(b,9)
+    # Native UI texture loading uses LZ10, matching both original streams.
+    from startup_credit import compress_native
+    compress=lambda b:compress_native(bytes(b),1)
     nt=compress(table[:8]+struct.pack('<'+'i'*len(newids),*newids));nd=compress(newtiles)
     header=bytearray(d[:offset]);pad=-len(nt)%4
     struct.pack_into('<III',header,52,len(nt),len(nt)+pad,len(nd))
