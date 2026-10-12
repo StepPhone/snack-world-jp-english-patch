@@ -1,6 +1,8 @@
 {
-  "archive_sha256": "b60ff24d2262132ab9a1883c877a399e090f1aac9bd56bb06607f7b360a764ca",
+  "patch_version": "0.5",
+  "archive_sha256": "5e385fa315bd62b8178d73658dc9279119c220bd2a8d4fcb53565c05c44ca78a",
   "archive_members_verified": 18392,
-  "clean_builder_reproduced_installed_archive": true,
-  "exact_freeze_scene_replay_verified": false
+  "clean_builder_reproduced_staged_archive": true,
+  "exact_freeze_scene_replay_verified": false,
+  "v05_visual_check_verified": false
 }

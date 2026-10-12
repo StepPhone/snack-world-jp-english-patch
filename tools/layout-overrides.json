@@ -998,5 +998,8 @@
   },
   "data/txt/ja/gamedata/system_text.cfg.bin": {
     "74:2": "Writing your adventure in your diary.\\n\\nDo not turn off the console or remove\\nthe game card / SD card."
+  },
+  "data/txt/ja/gamedata/ev/ev02_8000_ja.cfg.bin": {
+    "2:2": "Haah... I guess a superstar's always\\nin the spotlight, twenty-four-seven."
   }
 }

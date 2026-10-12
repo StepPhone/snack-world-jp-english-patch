@@ -1,6 +1,8 @@
-# Snack World JP English Patch
+# Snack World JP English Patch — v0.5
 
-English localization overlay for the Japanese Switch base game, **010072B007418000, version 1.0.0 (v0)**. Playable test build by **StepPhone of the StepHackerZ**.
+English localization overlay for the Japanese Switch base game, **010072B007418000, version 1.0.0 (v0)**. **Patch version: v0.5 (test build).** Game version 1.0.0 above is the compatibility requirement, not the patch version.
+
+By **StepPhone of the StepHackerZ**.
 
 This download contains the patch builder, translation corrections and startup credit artwork. Build the installable RomFS overlay locally using your own extracted Japanese and European base-game files. Game archives, movies, keys, firmware and saves are not included.
 
@@ -43,6 +45,9 @@ No individual output file exceeds 4 GiB. Physical Switch and handheld-mode testi
 Close the game before changing files. On Eden, disable or remove this mod's folder. On Switch, remove only this patch's archive and its three movies from the title's RomFS directory. Save data is not changed by installing or removing the overlay. When updating, replace the previous patch files rather than enabling two versions together.
 
 ## Included corrections
+
+- Repaired the existing Japanese anime-menu button with English artwork; the menu remains available.
+- Shortened the overflowing Mer maidol dialogue to two lines.
 
 - English text and compatible graphics drawn from the EUR localization, with additional translations for unmatched Japanese entries.
 - Explicit wrapping and shorter descriptions for item, boon, Jara skill and burst panels; restored missing menu font styles.

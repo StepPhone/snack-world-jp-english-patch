@@ -130,6 +130,11 @@ def build():
             skipped.append({'path':dest,'source':source,'reason':'different format signature'}); continue
         replacements[dest]=donor; counts['graphic_files']+=1
         manifest.append({'path':dest,'source':source,'kind':kind,'sha256':sha(donor),'original_sha256':sha(orig)})
+    from title_fixes import title_button
+    title_path='data/menu/title_d00.xa'
+    replacements[title_path]=title_button(replacements[title_path])
+    for entry in manifest:
+        if entry['path']==title_path: entry['sha256']=sha(replacements[title_path])
     style_path,style_data,style_changes=font_styles(j,e)
     replacements[style_path]=style_data
     counts['font_style_fields_corrected']=len(style_changes)
