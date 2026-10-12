@@ -4,28 +4,15 @@ English localization overlay for the Japanese Switch base game, **010072B0074180
 
 By **StepPhone of the StepHackerZ**.
 
-This download contains the patch builder, translation corrections and startup credit artwork. Build the installable RomFS overlay locally using your own extracted Japanese and European base-game files. Game archives, movies, keys, firmware and saves are not included.
+This public repository contains release notes, installation instructions and known issues. The builder and developer instructions are maintained privately.
 
-## Build
-
-Requires Python 3.11 or newer, Pillow, approximately 15 GB free space, and extracted JP and EUR base-game RomFS folders. Each input folder must contain `archive_a.fa` and its original `mov` directory. The builder checks the supported archive hashes before making changes. It does not extract or decrypt game images.
-
-1. Download this repository using **Code → Download ZIP**, then extract it.
-2. Open a terminal in the extracted folder.
-3. Run:
-
-```powershell
-python -m pip install -r requirements.txt
-python build.py --jp-romfs "C:\Games\SnackWorld-JP\romfs" --eur-romfs "C:\Games\SnackWorld-EUR\romfs"
-```
-
-Replace those two example paths with your extracted folders. The build verifies all 18,392 archive members and creates `output/romfs`, containing `archive_a.fa` and three movie overlays. Original inputs are read only. Move any existing `output` folder aside before rebuilding. The `work` folder is temporary build data and may be removed after a successful build.
+A standalone player patch download is not currently published. Historical source-code downloads are old developer snapshots, not ready-to-install mods. The installation steps below apply once you have a generated RomFS overlay. Python, Pillow and EUR files are not needed to run an already-built overlay.
 
 ## Load in Eden
 
 1. Save and stop the game.
 2. Right-click the **Japanese** game and open its mod directory.
-3. Create `English Translation/romfs` there and copy the contents of `output/romfs` into it.
+3. Create `English Translation/romfs` there and copy the contents of the generated `romfs` folder into it.
 4. Enable **English Translation** in the game's properties, then launch.
 
 The result should be `<mod directory>/English Translation/romfs/archive_a.fa`, plus `romfs/mov/*.mp4`. Do not nest another `romfs` folder inside it. The Japanese game-list title is normal. The English title screen and StepHackerZ startup credit identify the loaded patch.
@@ -35,7 +22,7 @@ The result should be `<mod directory>/English Translation/romfs/archive_a.fa`, p
 For a Switch already running Atmosphere with game mod support:
 
 1. Save and close the game; keep a save backup.
-2. Copy the contents of `output/romfs` to `SD:/atmosphere/contents/010072B007418000/romfs/`.
+2. Copy the contents of the generated `romfs` folder to `SD:/atmosphere/contents/010072B007418000/romfs/`.
 3. Launch the Japanese base game.
 
 No individual output file exceeds 4 GiB. Physical Switch and handheld-mode testing are still outstanding. Updates and mods replacing the same files are unsupported until tested.

@@ -1,5 +1,9 @@
 # Changes
 
+## Repository organization
+
+The builder and developer instructions are now maintained privately. Existing release tags retain their historical snapshots.
+
 ## v0.5 — 2026-10-12
 
 - Clearly distinguish patch version 0.5 from base-game version 1.0.0.
