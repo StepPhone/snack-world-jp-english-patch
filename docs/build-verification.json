@@ -1,8 +1,9 @@
 {
   "patch_version": "0.5",
-  "archive_sha256": "5e385fa315bd62b8178d73658dc9279119c220bd2a8d4fcb53565c05c44ca78a",
+  "archive_sha256": "d2f940343366cdc671eed36c039d7d375e21884f6a77944319a31de94d8e386d",
   "archive_members_verified": 18392,
-  "clean_builder_reproduced_staged_archive": true,
+  "clean_builder_reproduced_staged_archive": false,
   "exact_freeze_scene_replay_verified": false,
-  "v05_visual_check_verified": false
+  "v05_visual_check_verified": false,
+  "title_artwork_repair_reverted": true
 }

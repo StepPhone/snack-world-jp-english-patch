@@ -46,7 +46,7 @@ Close the game before changing files. On Eden, disable or remove this mod's fold
 
 ## Included corrections
 
-- Repaired the existing Japanese anime-menu button with English artwork; the menu remains available.
+- The original Japanese anime menu remains available. Its broken English label is still unresolved; the attempted artwork repair was reverted after a title-screen regression.
 - Shortened the overflowing Mer maidol dialogue to two lines.
 
 - English text and compatible graphics drawn from the EUR localization, with additional translations for unmatched Japanese entries.
