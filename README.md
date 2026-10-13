@@ -6,44 +6,49 @@ By **StepPhone of the StepHackerZ**.
 
 This public repository contains release notes, installation instructions and known issues. The builder and developer instructions are maintained privately.
 
-## Download and apply
+## Ready-to-install downloads
 
-Download **Snack-World-JP-English-Patch-v0.5.1.zip** from the [v0.5.1 release](https://github.com/StepPhone/snack-world-jp-english-patch/releases/tag/v0.5.1). Choose the named patch asset, not the automatic Source code archive.
+Open the [v0.5.1 release](https://github.com/StepPhone/snack-world-jp-english-patch/releases/tag/v0.5.1) and download **both ZIPs for your platform**:
 
-Requires Python 3.11+, about 8 GB free space, and your original extracted Japanese base-game RomFS containing `archive_a.fa` and its original `mov` directory. **No EUR files, Pillow or private builder are required.**
+| Platform | Required downloads |
+| --- | --- |
+| Eden | `Snack-World-v0.5.1-Eden-Main.zip` and `Snack-World-v0.5.1-Eden-Movies.zip` |
+| Switch / Atmosphere | `Snack-World-v0.5.1-Switch-Main.zip` and `Snack-World-v0.5.1-Switch-Movies.zip` |
 
-Extract the download, open a terminal in its folder, and run:
-
-```text
-python apply_patch.py --jp-romfs "C:\Games\SnackWorld-JP\romfs"
-```
-
-Replace the example path with your JP RomFS folder. Wait for all three files to show Verified. Output: `English Translation/romfs`. Original inputs are read only. Move any previous output folder aside before applying again. Python is only needed to apply the patch, not to play.
-
-The player patch was tested with original JP files and reproduced the installed archive and both ending overlays exactly. A SHA-256 checksum is included with the release.
+**No Python, terminal commands, extracted RomFS, EUR files or builder are needed for these downloads.** You still need the Japanese base game installed. The two ZIPs contain different parts of the same mod; extract both into the same folder and merge folders when prompted. Do not use the automatic Source code downloads.
 
 ## Load in Eden
 
-1. Save and stop the game.
-2. Right-click the **Japanese** game and open its mod directory.
-3. Create `English Translation/romfs` there and copy the contents of the generated `romfs` folder into it.
-4. Enable **English Translation** in the game's properties, then launch.
+1. Save and stop the game. Disable or remove the previous version of this mod.
+2. Extract both Eden ZIPs into the same folder.
+3. Right-click the Japanese game in Eden and open its mod directory.
+4. Copy the extracted **English Translation** folder into that directory.
+5. Enable **English Translation** in the game's properties and launch.
 
-The result should be `<mod directory>/English Translation/romfs/archive_a.fa`, plus `romfs/mov/*.mp4`. Do not nest another `romfs` folder inside it. The Japanese game-list title is normal. The English menus and StepHackerZ startup credit identify the loaded patch; the title logo is Japanese with an English start prompt.
+The result must be `<mod directory>/English Translation/romfs/archive_a.fa` and two MP4 files under `English Translation/romfs/mov/`. Do not nest another `romfs` folder inside it.
 
 ## Load on Switch
 
 For a Switch already running Atmosphere with game mod support:
 
 1. Save and close the game; keep a save backup.
-2. Copy the contents of the generated `romfs` folder to `SD:/atmosphere/contents/010072B007418000/romfs/`.
-3. Launch the Japanese base game.
+2. Extract both Switch ZIPs into the same folder.
+3. Copy the extracted **atmosphere** folder to the SD card root, merging folders. Preserve unrelated mods.
+4. Launch the Japanese base game.
 
-No individual output file exceeds 4 GiB. Physical Switch and handheld-mode testing are still outstanding. Updates and mods replacing the same files are unsupported until tested.
+The result must be `SD:/atmosphere/contents/010072B007418000/romfs/archive_a.fa` and two MP4 files under its `mov` folder. No individual installed file exceeds 4 GiB. Physical Switch and handheld-mode testing remain outstanding. Updates and conflicting mods are unsupported until tested.
 
-## Uninstall or update
+## Update or uninstall
 
-Close the game before changing files. On Eden, disable or remove this mod's folder. On Switch, remove only this patch's archive and its two ending movies from the title's RomFS directory. Save data is not changed by installing or removing the overlay. When updating, replace the previous patch files rather than enabling two versions together. Remove the old mod's `sw-t_evop_0001.mp4` opening override if present; v0.5.1 uses the original Japanese opening.
+Close the game before changing mod files. When updating, remove the old mod's `sw-t_evop_0001.mp4` opening override if present: v0.5.1 retains the original Japanese opening. Do not enable two versions together.
+
+To uninstall in Eden, disable or remove the English Translation folder. On Switch, remove only this patch's `archive_a.fa` and its two ending movie overlays (`sw-t_eved_0001.mp4` and `sw-t_eved_0002.mp4`). Saves are not modified by installing or uninstalling.
+
+All packaged game files were read back from the ZIPs and hash-checked against the installed mod. `SHA256SUMS.txt` provides download checksums. This packaging update contains the same v0.5.1 game files.
+
+## Optional smaller delta package
+
+The older `Snack-World-JP-English-Patch-v0.5.1.zip` remains available for users who prefer applying a delta to original extracted JP files. **Only that optional download requires Python 3.11+ and extracted RomFS.** Its included README explains the command. It is not required for the ready-to-install ZIPs above. The developer builder remains private.
 
 ## Included corrections
 
