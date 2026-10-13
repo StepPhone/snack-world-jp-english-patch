@@ -1,6 +1,6 @@
-# Snack World JP English Patch — v0.5
+# Snack World JP English Patch — v0.5.1
 
-English localization overlay for the Japanese Switch base game, **010072B007418000, version 1.0.0 (v0)**. **Patch version: v0.5 (test build).** Game version 1.0.0 above is the compatibility requirement, not the patch version.
+English localization overlay for the Japanese Switch base game, **010072B007418000, version 1.0.0 (v0)**. **Patch version: v0.5.1 (test build).** Game version 1.0.0 above is the compatibility requirement, not the patch version.
 
 By **StepPhone of the StepHackerZ**.
 
@@ -33,6 +33,8 @@ Close the game before changing files. On Eden, disable or remove this mod's fold
 
 ## Included corrections
 
+- Japanese title logo with the English start prompt.
+
 - Repaired the Watch anime button, highlighted state and submenu: English episode labels, wrapped summaries and the original opaque background. Native texture compression preserves title-screen loading.
 - Shortened the overflowing Mermaidol dialogue to two lines.
 
@@ -42,11 +44,11 @@ Close the game before changing files. On Eden, disable or remove this mod's fold
 - Quoted voice parameters for 1,734 cues, preventing the JP parser from treating subsequent dialogue as part of a voice filename.
 - Original working character-name keyboard. Choose **A/1** for Latin letters; bottom-right confirms and bottom-left cancels.
 - Additional StepHackerZ startup credit after the original logos, on the native 1080p canvas scaled to the game's output.
-- English opening and ending movie overlays, retaining external Japanese audio.
+- English ending movie overlays; the original Japanese opening is retained.
 
 ## Test status and known issues
 
-The native ARM64 parser regression test reproduced the malformed voice filenames on both the Gale and Mayonna lines; quoted parameters return the intended IDs. **Those exact freeze scenes have not yet been replayed in-game**, so this is not a claim that every freeze is resolved. See [technical notes](docs/dialogue-parser.md).
+The native ARM64 parser regression test reproduced the malformed voice filenames on both the Gale and Mayonna lines; quoted parameters return the intended IDs. **Those exact freeze scenes have not yet been replayed in-game**, so this is not a claim that every freeze is resolved.
 
 Character creation, the corrected Jara layout, title loading, the Watch anime button and all four episode-menu pages were confirmed in user playtesting. Startup credit rendering and continuation were observed in Eden docked mode. A complete playthrough has not been performed.
 

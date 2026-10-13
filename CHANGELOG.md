@@ -1,5 +1,13 @@
 # Changes
 
+## v0.5.1
+
+- Restore the original Japanese opening movie.
+- Keep the Japanese title logo with the English start prompt.
+- Preserve English menus and the StepHackerZ startup credit.
+- All 18,392 archive members verified. Final combined title-screen appearance awaits user confirmation.
+
+
 ## Repository organization
 
 The builder and developer instructions are now maintained privately. Existing release tags retain their historical snapshots.
