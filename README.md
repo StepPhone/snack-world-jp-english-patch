@@ -6,7 +6,21 @@ By **StepPhone of the StepHackerZ**.
 
 This public repository contains release notes, installation instructions and known issues. The builder and developer instructions are maintained privately.
 
-A standalone player patch download is not currently published. Historical source-code downloads are old developer snapshots, not ready-to-install mods. The installation steps below apply once you have a generated RomFS overlay. Python, Pillow and EUR files are not needed to run an already-built overlay.
+## Download and apply
+
+Download **Snack-World-JP-English-Patch-v0.5.1.zip** from the [v0.5.1 release](https://github.com/StepPhone/snack-world-jp-english-patch/releases/tag/v0.5.1). Choose the named patch asset, not the automatic Source code archive.
+
+Requires Python 3.11+, about 8 GB free space, and your original extracted Japanese base-game RomFS containing `archive_a.fa` and its original `mov` directory. **No EUR files, Pillow or private builder are required.**
+
+Extract the download, open a terminal in its folder, and run:
+
+```text
+python apply_patch.py --jp-romfs "C:\Games\SnackWorld-JP\romfs"
+```
+
+Replace the example path with your JP RomFS folder. Wait for all three files to show Verified. Output: `English Translation/romfs`. Original inputs are read only. Move any previous output folder aside before applying again. Python is only needed to apply the patch, not to play.
+
+The player patch was tested with original JP files and reproduced the installed archive and both ending overlays exactly. A SHA-256 checksum is included with the release.
 
 ## Load in Eden
 
@@ -15,7 +29,7 @@ A standalone player patch download is not currently published. Historical source
 3. Create `English Translation/romfs` there and copy the contents of the generated `romfs` folder into it.
 4. Enable **English Translation** in the game's properties, then launch.
 
-The result should be `<mod directory>/English Translation/romfs/archive_a.fa`, plus `romfs/mov/*.mp4`. Do not nest another `romfs` folder inside it. The Japanese game-list title is normal. The English title screen and StepHackerZ startup credit identify the loaded patch.
+The result should be `<mod directory>/English Translation/romfs/archive_a.fa`, plus `romfs/mov/*.mp4`. Do not nest another `romfs` folder inside it. The Japanese game-list title is normal. The English menus and StepHackerZ startup credit identify the loaded patch; the title logo is Japanese with an English start prompt.
 
 ## Load on Switch
 
@@ -29,7 +43,7 @@ No individual output file exceeds 4 GiB. Physical Switch and handheld-mode testi
 
 ## Uninstall or update
 
-Close the game before changing files. On Eden, disable or remove this mod's folder. On Switch, remove only this patch's archive and its three movies from the title's RomFS directory. Save data is not changed by installing or removing the overlay. When updating, replace the previous patch files rather than enabling two versions together.
+Close the game before changing files. On Eden, disable or remove this mod's folder. On Switch, remove only this patch's archive and its two ending movies from the title's RomFS directory. Save data is not changed by installing or removing the overlay. When updating, replace the previous patch files rather than enabling two versions together. Remove the old mod's `sw-t_evop_0001.mp4` opening override if present; v0.5.1 uses the original Japanese opening.
 
 ## Included corrections
 
@@ -63,3 +77,4 @@ Report problems with a screenshot, game version, emulator/version or hardware, p
 Project and startup artwork: **StepPhone of the StepHackerZ**. [Support StepPhone](https://ko-fi.com/stepphone).
 
 Original game and EUR localization belong to their respective rights holders. Format research references: [Kuriimu2](https://github.com/FanTranslatorsInternational/Kuriimu2), [CfgBinEditor](https://github.com/onepiecefreak3/CfgBinEditor), and [XtractQuery](https://github.com/onepiecefreak3/XtractQuery).
+
